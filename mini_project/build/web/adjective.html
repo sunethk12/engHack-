@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+
+        <link rel = "stylesheet" type = "text/css" href = "css/about_us.css">
+        <!--Bootstrap--> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <title>Adjectives</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            p.heading{
+                text-align : center;	
+                padding : 20px;
+                font-size : 50px;
+                color : #00FFFF;
+                font-family: HeadFont;
+            }
+
+            body{
+                background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.5)), url('Image/web1.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment:fixed;
+                background-position : center center;
+
+
+            }
+
+            input[type=text], input[type=password] {
+                width: 90%;
+                padding: 5px 2px;
+                margin: 10px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+
+            } 
+
+            .start_login{
+                padding: 16px;
+                text-align : center;
+
+            }
+
+            .form_design{
+                margin : 3% 30% 0% 35%;
+                width  : 30%;
+                background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6));
+                border: 1px solid black;
+                border-radius: 40px;
+
+            }
+
+            *{
+                box-sizing: border-box;
+            }
+
+            .cl{
+                color:whitesmoke;
+                text-align: center;
+
+                margin: 20px;
+            }
+            .cl2{
+                color:whitesmoke;
+                text-align: justify;
+                font-size: 20px;
+                margin: 20px;
+            }
+
+
+            @font-face {
+                font-family: NavFont;
+                src: url(Fonts/fon4.otf);
+
+            }
+            @font-face{
+                font-family: TextFont;
+                src: url(Fonts/font1.otf);;
+            }
+
+            @font-face {
+                font-family: HeadFont;
+                src: url(Fonts/font2.otf);
+
+            }
+
+            #quiz{
+                border:#5AB029 3px solid;
+                padding:10px 40px 40px 40px;
+                background-color:window;
+                width:90%;
+                margin: 20px 40px 20px 20px;
+
+            }
+
+
+            body{
+
+                font-family: sans-serif;
+                color: darkslateblue;
+
+
+            }
+            .question{
+                font-weight: 600;
+            }
+            .answers {
+                margin-bottom: 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+
+            }
+            #submit{
+                font-family: sans-serif;
+                font-size: 20px;
+                background-color: #297;
+                color: #fff;
+                border: 0px;
+                border-radius: 3px;
+                padding: 20px;
+                cursor: pointer;
+                margin-bottom: 20px;
+                margin-left: 20px;
+            }
+            #submit:hover{
+                background-color: #3a8;
+            }
+            #results{
+                color: white;
+
+                padding-right: 500px;
+                float: right;
+            }
+
+
+
+        </style>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+
+                <ul class="nav navbar-nav">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="grammer.html">Grammer </a></li>
+                    <li><a href="listening.html">Listening </a></li>
+                    <li><a href="reading.html">Reading </a></li>
+                    <li><a href="speaking.html">Speaking </a></li>
+                    <li><a href="essaywriting.html">Writing </a></li>
+
+
+                    <li ><a href="about.html">About Us</a></li>
+                </ul>
+
+            </div>
+        </nav>
+
+
+        <h1 class="cl" style="color: orange;"> <u>ADJECTIVE</u></h1>
+
+        <p class="cl2"> An adjective modifies or describes a noun or pronoun.<br>
+
+            <br>
+            An adjective is a word used to modify or describe a noun or a pronoun. It usually answers the question of which one, what kind, or how many. (Articles [a, an, the] are usually classified as adjectives.)<br>
+
+            <br>
+            Examples: <br>
+            (1) The <u>young</u> girl brought me a very <u>long</u> letter from the teacher
+            <br>
+            (2) He is an <u>old</u> man now.
+            <br>
+            (3) It is a <u>beautiful</u> shirt.  
+
+
+        </p>
+
+        <br>
+
+
+        <p style="margin: 20px;color: orange;font-size: 30px;">Activity</p>
+        <h3 style="margin: 20px;color: orange">Select the most suitable adjective  </h3>
+
+
+        <div id="quiz"></div>
+        <button id="submit">Get Results</button>
+        <div id="results"></div>
+
+        <script>
+            var myQuestions = [
+                {
+                    question: "(1) She waved to her………friends.",
+                    answers: {
+                        a: 'three',
+                        b: 'bad'
+
+
+                    },
+                    correctAnswer: 'a'
+                },
+                {
+                    question: "(2) 2.	She jumped over a ……… puddle. ",
+                    answers: {
+                        a: 'huge',
+                        b: 'easy'
+
+
+                    },
+                    correctAnswer: 'a'
+                },
+                {
+                    question: "(3) The architect designed the …………house. ",
+                    answers: {
+                        a: 'dirty',
+                        b: 'beautiful'
+
+
+                    },
+                    correctAnswer: 'b'
+                },
+                {
+                    question: "(4) Wow. my favourite ........ shirt. ",
+                    answers: {
+                        a: 'red',
+                        b: 'ugly'
+
+
+                    },
+                    correctAnswer: 'a'
+                },
+                {
+                    question: "(5) This car is ....... ",
+                    answers: {
+                        a: 'tasty',
+                        b: 'big'
+
+
+                    },
+                    correctAnswer: 'b'
+                }
+            ];
+
+            var quizContainer = document.getElementById('quiz');
+            var resultsContainer = document.getElementById('results');
+            var submitButton = document.getElementById('submit');
+
+            generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+            function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
+
+                function showQuestions(questions, quizContainer) {
+                    // we'll need a place to store the output and the answer choices
+                    var output = [];
+                    var answers;
+
+                    // for each question...
+                    for (var i = 0; i < questions.length; i++) {
+
+                        // first reset the list of answers
+                        answers = [];
+
+                        // for each available answer...
+                        for (letter in questions[i].answers) {
+
+                            // ...add an html radio button
+                            answers.push(
+                                    '<label>'
+                                    + '<input type="radio" name="question' + i + '" value="' + letter + '">'
+                                    + letter + ': '
+                                    + questions[i].answers[letter]
+                                    + '</label>'
+                                    );
+                        }
+
+                        // add this question and its answers to the output
+                        output.push(
+                                '<div class="question">' + questions[i].question + '</div>'
+                                + '<div class="answers">' + answers.join('') + '</div>'
+                                );
+                    }
+
+                    // finally combine our output list into one string of html and put it on the page
+                    quizContainer.innerHTML = output.join('');
+                }
+
+
+                function showResults(questions, quizContainer, resultsContainer) {
+
+                    // gather answer containers from our quiz
+                    var answerContainers = quizContainer.querySelectorAll('.answers');
+
+                    // keep track of user's answers
+                    var userAnswer = '';
+                    var numCorrect = 0;
+
+                    // for each question...
+                    for (var i = 0; i < questions.length; i++) {
+
+                        // find selected answer
+                        userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked') || {}).value;
+
+                        // if answer is correct
+                        if (userAnswer === questions[i].correctAnswer) {
+                            // add to the number of correct answers
+                            numCorrect++;
+
+                            // color the answers green
+                            answerContainers[i].style.color = '#40FF33';
+                        }
+                        // if answer is wrong or blank
+                        else {
+                            // color the answers red
+                            answerContainers[i].style.color = 'red';
+                        }
+                    }
+
+                    // show number of correct answers out of total
+                    resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+                }
+
+                // show questions right away
+                showQuestions(questions, quizContainer);
+
+                // on submit, show results
+                submitButton.onclick = function () {
+                    showResults(questions, quizContainer, resultsContainer);
+                }
+
+            }
+
+        </script>
+
+
+
+    </body>
+</html>
